@@ -104,11 +104,21 @@ body:has(.home-hero) > footer {
 }
 
 /* Legal page prose styling for react-markdown output */
+
+/* Section breaks — generous top margin + faint divider between sections */
 .legal-prose h2 {
   font-family: var(--font-playfair);
   font-size: 1.125rem;
   color: oklch(0.93 0.015 85);
   margin-bottom: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid oklch(0.42 0.025 55 / 0.4);
+}
+
+/* First section needs no divider */
+.legal-prose h2:first-child {
+  padding-top: 0;
+  border-top: none;
 }
 
 .legal-prose h3 {
@@ -116,7 +126,12 @@ body:has(.home-hero) > footer {
   font-weight: 500;
   color: oklch(0.93 0.015 85);
   margin-bottom: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
+}
+
+/* Collapse spacing between h2 and immediately following h3 */
+.legal-prose h2 + h3 {
+  margin-top: 0;
 }
 
 .legal-prose p {
@@ -127,6 +142,7 @@ body:has(.home-hero) > footer {
   list-style-type: disc;
   margin-left: 1rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
