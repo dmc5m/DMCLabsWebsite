@@ -6,8 +6,8 @@ export default function Home() {
           DMC Labs
         </h1>
         <div className="mx-auto mt-6 h-px w-16 bg-taupe/40" />
-        <p className="mt-6 text-sm tracking-widest text-cream-muted uppercase">
-          Software, thoughtfully crafted.
+        <p className="mt-6 text-base tracking-widest text-cream-muted uppercase">
+          ONE
         </p>
       </div>
     </div>
