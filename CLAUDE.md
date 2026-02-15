@@ -26,3 +26,15 @@ Company website for DMC Labs, LLC (Florida LLC) at dmclabs.one. Static site host
 
 ## Domain
 dmclabs.one — DNS managed via Squarespace, pointed to GitHub Pages.
+
+## Pending: Migrate Terms & Privacy to Shared Legal Repo
+
+The Terms of Service and Privacy Policy content has been extracted to a shared public repo: **https://github.com/DMC-Labs-LLC/legal** (`terms.md` and `privacy.md` with YAML frontmatter including `version` field).
+
+Kiddo Cash (LianaSavings) already fetches and renders from this repo. This website needs to be updated to do the same:
+
+1. **Refactor `app/terms/page.tsx`** — Instead of hardcoded JSX, fetch and render `terms.md` from the legal repo. Keep the site's existing "luxury hotel lobby" styling.
+2. **Refactor `app/privacy/page.tsx`** — Same approach with `privacy.md`.
+3. **Install a markdown renderer** (e.g., `react-markdown`) to render the markdown content with this site's styling.
+4. **Note:** Since this is a static export (`output: "export"`), the markdown must be fetched at build time, not request time. Use `fetch()` in the server component — Next.js will run it during `next build`.
+5. **Source URL:** `https://raw.githubusercontent.com/DMC-Labs-LLC/legal/main/terms.md` (and `privacy.md`)
