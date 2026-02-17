@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Mail } from 'lucide-react'
+import { ObfuscatedEmail } from '@/components/obfuscated-email'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -17,13 +18,12 @@ export default function Contact() {
         <p className="mt-6 text-sm leading-relaxed text-cream-muted">
           Questions, concerns, or data requests?
         </p>
-        <a
-          href="mailto:contact@dmclabs.one"
+        <ObfuscatedEmail
+          user="contact"
+          domain="dmclabs.one"
           className="mt-6 inline-flex items-center gap-2 rounded-md bg-walnut/60 px-6 py-3 text-sm tracking-wide text-cream transition-colors duration-300 hover:bg-taupe/40"
-        >
-          <Mail size={16} className="text-cream-muted" />
-          contact@dmclabs.one
-        </a>
+          icon={<Mail size={16} className="text-cream-muted" />}
+        />
       </div>
     </div>
   )

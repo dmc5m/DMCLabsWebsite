@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import Markdown from 'react-markdown'
 import { fetchLegalDocument } from '@/lib/legal'
+import { LegalMarkdown } from '@/components/legal-markdown'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -23,7 +23,7 @@ export default async function TermsOfService() {
 
       <div className="mt-12 rounded-lg bg-walnut/50 p-8 sm:p-10">
         <div className="legal-prose space-y-8 text-sm leading-relaxed text-cream/90">
-          <Markdown>{doc.content}</Markdown>
+          <LegalMarkdown content={doc.content} />
         </div>
       </div>
     </div>
