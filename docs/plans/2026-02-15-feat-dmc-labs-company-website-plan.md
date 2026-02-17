@@ -5,7 +5,7 @@ date: 2026-02-15
 brainstorm: docs/brainstorms/2026-02-15-dmc-labs-website-brainstorm.md
 ---
 
-# feat: DMC Labs Company Website
+# feat: DMC Labs Company Website 
 
 ## Overview
 
